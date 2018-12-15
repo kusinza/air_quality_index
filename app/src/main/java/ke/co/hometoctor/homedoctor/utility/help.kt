@@ -34,6 +34,7 @@ class help : Fragment() {
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val v= inflater.inflate(R.layout.fragment_help, container, false)
+        db= FirebaseFirestore.getInstance()
 
         val docRef = db.collection("help").document("help_item")
         docRef.get()
