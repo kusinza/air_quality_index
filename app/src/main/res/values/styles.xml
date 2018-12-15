@@ -1,0 +1,41 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="FullscreenTheme" parent="hometheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+        <item name="android:windowContentTransitions" >true</item>
+        <!-- specify enter and exit transitions -->
+        <item name="android:windowEnterTransition" >@transition/explod</item>
+        <item name="android:windowExitTransition">@transition/explod</item>
+
+        <!-- specify shared element transitions -->
+        <item name="android:windowSharedElementEnterTransition">
+            @transition/change_image_transform
+        </item>
+        <item name="android:windowSharedElementExitTransition">
+            @transition/change_image_transform
+        </item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="BaseAppTheme" parent="android:Theme.Material" tools:targetApi="lollipop">
+        <!-- enable window content transitions -->
+        <item name="android:windowActivityTransitions">true</item>
+
+        <!-- specify enter and exit transitions -->
+        <item name="android:windowEnterTransition">@transition/explod</item>
+        <item name="android:windowExitTransition">@transition/explod</item>
+
+        <!-- specify shared element transitions -->
+        <item name="android:windowSharedElementEnterTransition">
+            @transition/change_image_transform</item>
+        <item name="android:windowSharedElementExitTransition">
+            @transition/change_image_transform</item>
+    </style>
+</resources>

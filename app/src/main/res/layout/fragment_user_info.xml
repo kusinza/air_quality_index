@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".utility.user_info"
+    android:background="@drawable/basetheme"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/button_done">
+
+            <EditText
+                android:padding="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:typeface="normal"
+                android:inputType="textEmailAddress"
+                android:id="@+id/name_user"
+                android:hint="Input full name"
+                android:textColorHint="@color/hint_color_fade"
+                android:textSize="20sp"
+                android:textColor="@color/white_color"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+            <EditText
+                android:padding="10dp"
+                android:layout_below="@+id/name_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:typeface="normal"
+                android:inputType="textEmailAddress"
+                android:id="@+id/date_of_birth"
+                android:hint="How long have you been pregnant"
+                android:textColorHint="@color/hint_color_fade"
+                android:textSize="20sp"
+                android:textColor="@color/white_color"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+           <TextView
+               android:padding="6dp"
+               android:gravity="center"
+               android:layout_below="@id/date_of_birth"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_centerHorizontal="true"
+               android:text="health"/>
+            <SeekBar
+                android:padding="6dp"
+                android:layout_below="@id/date_of_birth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/health"
+                />
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/duration"
+                android:padding="6dp"
+                android:gravity="center"
+                android:layout_below="@id/health"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="How long have you been pregnant"
+                />
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_below="@id/duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Days"/>
+                    <Spinner
+                        android:backgroundTint="@color/white_color"
+                        style="@style/table_drink_drop"
+                        android:id="@+id/select_days"
+                        android:layout_weight="1.1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+
+                        android:theme="@style/ThemeOverlay.AppCompat.Light"
+                        android:background="@drawable/dropdown_sniper"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Weeks"/>
+                    <Spinner
+                        android:padding="4dp"
+                        android:backgroundTint="@color/white_color"
+                        style="@style/table_drink_drop"
+                        android:id="@+id/select_weeks"
+                        android:layout_weight="1.1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+
+                        android:theme="@style/ThemeOverlay.AppCompat.Light"
+                        android:background="@drawable/dropdown_sniper"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Months"/>
+                    <Spinner
+                        android:backgroundTint="@color/white_color"
+                        style="@style/table_drink_drop"
+                        android:id="@+id/select_months"
+                        android:layout_weight="1.1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+
+                        android:theme="@style/ThemeOverlay.AppCompat.Light"
+                        android:background="@drawable/dropdown_sniper"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/base_button_theme"
+            android:text="DONE"
+            android:id="@+id/button_done"
+            android:textColor="@color/white_color"
+            android:layout_alignParentBottom="true"/>
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".utility.sign_up"
+    android:background="@drawable/basetheme">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/sign_up_button">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:typeface="normal"
+                android:inputType="textEmailAddress"
+                android:id="@+id/email"
+                android:hint="@string/input_email"
+                android:textColorHint="@color/text_input_dim"
+                android:textSize="20sp"
+                android:textColor="@color/white_color"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:typeface="normal"
+                android:inputType="textPassword"
+                android:layout_below="@+id/email"
+                android:id="@+id/password"
+                android:hint="password"
+                android:textColorHint="@color/text_input_dim"
+                android:textSize="20sp"
+                android:textColor="@color/white_color"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:typeface="normal"
+                android:inputType="textPassword"
+                android:layout_below="@+id/password"
+                android:id="@+id/c_password"
+                android:hint="confirm password"
+                android:textColorHint="@color/text_input_dim"
+                android:textSize="20sp"
+                android:textColor="@color/white_color"/>
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/base_button_theme"
+            android:text="SIGN UP"
+            android:id="@+id/sign_up_button"
+            android:textColor="@color/white_color"
+            android:layout_alignParentBottom="true"/>
+
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>

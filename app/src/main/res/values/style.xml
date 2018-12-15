@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="hometheme" parent="Theme.AppCompat.Light.NoActionBar"></style>
+
+    <style name="table_drink_drop">
+        <item name="android:textColor">@color/hint_color1</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:drawableLeft">@drawable/dropdown1</item>
+        <item name="android:background">@color/backgroundtest</item>
+    </style>
+</resources>

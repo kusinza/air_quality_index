@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ambulance">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/search_fragment_view">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/mapview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+           </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/selected_user_view"
+            android:background="@color/button_fade"
+            android:layout_below="@+id/search_view_text"
+            android:layout_marginBottom="12dp">
+            <TextView
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:textColor="@color/white_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/name_user"
+                android:textSize="24sp"/>
+            <TextView
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_margin="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/username"
+                android:textSize="18sp"
+                android:textColor="@color/hint_color_fade"/>
+            <TextView
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_margin="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/acc_type"
+                android:textColor="@color/hint_color_fade"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:transitionName="clinic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:id="@+id/search_view_text"
+            android:background="@drawable/theme_back">
+            <SearchView
+                android:id="@+id/search_text"
+                android:padding="5dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/basetheme"
+                android:iconifiedByDefault="true"
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:queryHint="Search Clinic"/>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/recycle_search"
+            android:layout_below="@id/search_view_text"
+            android:layout_centerHorizontal="true">
+
+        </android.support.v7.widget.RecyclerView>
+        <TextView
+            android:visibility="gone"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/task_text"
+            android:background="@color/button_fade"
+            android:textColor="@color/white_color"
+            android:textSize="20sp"
+            android:layout_below="@id/recycle_search"
+            android:layout_marginTop="50dp"
+            android:layout_centerVertical="false"
+            android:layout_centerHorizontal="true"
+            />
+
+    </RelativeLayout>
+
+
+</FrameLayout>

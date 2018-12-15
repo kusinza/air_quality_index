@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".utility.MainPage"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="log out"
+            android:id="@+id/log_out"
+            android:textColor="@color/white_color"
+            android:layout_alignParentRight="true"
+            android:textSize="20sp"/>
+        <Button
+            android:visibility="gone"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/base_button_theme"
+            android:text="Emergency"
+            android:id="@+id/button_don"
+            android:textColor="@color/white_color"
+            android:layout_below="@id/log_out"
+            />
+
+
+        <RelativeLayout
+            android:layout_marginTop="50dp"
+            android:layout_below="@id/button_don"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/basetheme"
+            android:layout_alignParentTop="true"
+
+            >
+
+
+
+            <TextView
+                android:padding="6dp"
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:typeface="normal"
+                android:id="@+id/name_user"
+                android:text="hello "
+                android:textColorHint="@color/hint_color_fade"
+                android:textSize="20sp"
+                android:textColor="@color/white_color"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+            <TextView
+                android:padding="6dp"
+                android:layout_below="@+id/name_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:typeface="normal"
+                android:id="@+id/date_of_birth"
+                android:textColorHint="@color/hint_color_fade"
+                android:textSize="20sp"
+                android:textColor="@color/white_color"
+                android:text="Pregnancy"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/date_of_birth"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/symptom_view"
+
+                >
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/talk_container">
+                    <TextView
+                        android:padding="6dp"
+                        android:gravity="center"
+                        android:id="@+id/current_health"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="How are you feeling today?"/>
+                    <SeekBar
+                        android:padding="6dp"
+                        android:layout_below="@id/current_health"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/health"
+                        />
+                    <TextView
+                        android:padding="6dp"
+                        android:id="@+id/state_health"
+                        android:gravity="center"
+                        android:layout_below="@id/health"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Average"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/talk_to_us1"
+                    android:layout_below="@+id/talk_container"
+                    android:text="Progress"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:textColor="@color/white_color"
+                    android:focusableInTouchMode="false"
+                    android:textAppearance="?android:attr/textAppearanceLarge"/>/>
+                <com.jjoe64.graphview.GraphView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dip"
+                    android:id="@+id/graph"
+                    android:layout_below="@+id/talk_to_us1"
+                    />
+
+
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:gravity="left"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_height="80dp"
+                    >
+                    <RelativeLayout
+                        android:gravity="center|bottom"
+                        android:transitionName="talk"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/message"/>
+                        <TextView
+
+                            android:id="@+id/talk_to_us"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="4sp"
+                            android:gravity="center|bottom"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="chat"
+                            android:textSize="20sp"
+                            android:textColor="@color/hint_color_fade"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="100dp"
+            android:gravity="left"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_height="80dp"
+
+            android:id="@+id/base_menu"
+            >
+            <RelativeLayout
+                android:id="@+id/home"
+                android:gravity="center|bottom"
+                android:transitionName="home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/home"/>
+                <TextView
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HOME"
+                    android:visibility="gone"
+                    android:textSize="20sp"
+                    android:textColor="@color/hint_color_fade"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".utility.menu_home"
+    android:background="@drawable/basetheme2">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|bottom"
+                    android:transitionName="home">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/home"
+                        android:layout_above="@+id/home_t"/>
+
+                    <TextView
+                        android:id="@+id/home_t"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="HOME"
+                        android:textColor="@color/white_color"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/emergency"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom|center"
+                    android:transitionName="emergency">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ambulance"
+                        android:layout_above="@+id/emergency_t"/>
+
+                    <TextView
+                        android:id="@+id/emergency_t"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="EMERGENCY"
+                        android:textColor="@color/white_color"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+
+                >
+
+                <RelativeLayout
+                    android:id="@+id/help"
+                    android:gravity="center|bottom"
+                    android:transitionName="help"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                   >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/help"
+                        android:layout_above="@+id/help_t"/>
+                   <TextView
+                       android:id="@+id/help_t"
+                       android:gravity="bottom"
+                       android:layout_alignParentBottom="true"
+                       android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HELP"
+                        android:textSize="20sp"
+                       android:textColor="@color/white_color"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                >
+                <RelativeLayout
+                    android:id="@+id/clinic"
+                    android:gravity="center|bottom"
+                    android:transitionName="clinic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/clinic2"
+                        android:layout_above="@+id/clinic_t"/>
+                    <TextView
+                        android:id="@+id/clinic_t"
+                        android:gravity="bottom"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CLINIC"
+                        android:textSize="20sp"
+                        android:textColor="@color/white_color"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</FrameLayout>

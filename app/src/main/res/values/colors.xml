@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="background_color">#AD1A20</color>
+    <color name="third_color">#65220E</color>
+
+    <color name="hint_color1">#0099cc</color>
+    <color name="hint_color_fade">#33b5e5</color>
+    <color name="button_fade">#aadc7415</color>
+    <color name="text_input_color">#0099cc</color>
+    <color name="white_color">#FFFFFF</color>
+    <color name="nothing">#00ffffff</color>
+
+    <color name="beer">#722D1D</color>
+    <color name="beercolor_fade">#bd4d0d0f</color>
+    <color name="button_color">#f91e1e</color>
+    <color name="backgroundtest">#B11226</color>
+    <color name="backgroundtest2">#e6722d1d</color>
+    <color name="colorPrimary1">#795548</color>
+    <color name="colorPrimaryDark1">#5D4037</color>
+    <color name="colorAccent1">#CDDC39</color>
+    <color name="blurry">#d0131212</color>
+    <color name="blurry2">#131212</color>
+    <color name="text_input_dim">#f5dfdde4</color>
+
+    <color name="black_overlay">#66000000</color>
+</resources>
