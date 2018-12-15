@@ -22,7 +22,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:keepScreenOn="true"
-            android:text="Home Doctor"
+            android:text="Home Clinic"
             android:textColor="#33b5e5"
             android:textSize="50sp"
             android:textStyle="bold" />
