@@ -81,7 +81,10 @@ class menu_home : Fragment() {
                                 updateUI(st,"clinic",v)
                             }
                             R.id.emergency->{
-
+//emergency
+                                val st=emergency()
+                                st.mAuth=mAuth
+                                updateUI(st,"emergency",v)
                             }
                             R.id.help->{
                                 val st=help()

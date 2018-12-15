@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".utility.emergency"
+    android:background="@drawable/basetheme">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="300dp"
+            android:gravity="left"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_height="300dp"
+
+            android:id="@+id/base_menu"
+            >
+            <RelativeLayout
+                android:id="@+id/home"
+                android:gravity="center|bottom"
+                android:transitionName="emergency"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/emergency"/>
+                <TextView
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HOME"
+                    android:visibility="gone"
+                    android:textSize="20sp"
+                    android:textColor="@color/hint_color_fade"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:gravity="center"
+            android:layout_below="@+id/base_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Your request has been submitted\nYou will assisted shortly "
+            android:textColor="@color/white_color"
+            android:textSize="20sp"
+            android:id="@+id/procedure"
+            />
+    </RelativeLayout>
+
+</FrameLayout>
