@@ -3,28 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ambulance">
+    tools:context=".utility.help"
+    android:background="@drawable/basetheme">
+
 
     <RelativeLayout
-        android:background="@drawable/basetheme"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:id="@+id/search_fragment_view">
-
-        <RelativeLayout
-            android:layout_below="@+id/base_menu"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <com.google.android.gms.maps.MapView
-
-                android:id="@+id/mapview"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                />
-
-           </RelativeLayout>
-
+        android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="100dp"
             android:gravity="left"
@@ -37,13 +22,13 @@
             <RelativeLayout
                 android:id="@+id/home"
                 android:gravity="center|bottom"
-                android:transitionName="clinic"
+                android:transitionName="help"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/clinic2"/>
+                    android:src="@drawable/help"/>
                 <TextView
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
@@ -58,8 +43,15 @@
 
         </LinearLayout>
 
-
+        <TextView
+            android:layout_below="@+id/base_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textColor="@color/white_color"
+            android:textSize="20sp"
+            android:id="@+id/procedure"
+            />
     </RelativeLayout>
-
 
 </FrameLayout>

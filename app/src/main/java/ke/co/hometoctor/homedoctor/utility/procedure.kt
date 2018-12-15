@@ -32,38 +32,67 @@ class procedure : Fragment() {
     public lateinit var  mAuth: FirebaseAuth
     lateinit var mUser: user_info_
     lateinit var db: FirebaseFirestore
+    var caller=1
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val v= inflater.inflate(R.layout.fragment_procedure, container, false)
         db= FirebaseFirestore.getInstance()
 
-        val docRef = db.collection("symptom").document(arguments!!.getString("symptom"))
-        docRef.get()
-                .addOnSuccessListener { document ->
-                    if (document != null || document!!.data!=null ) {
-                        Log.d(ContentValues.TAG, "DocumentSnapshot data: " + document.data)
-                        if(document.data==null){
+        if(caller==1) {
+            val docRef = db.collection("symptom").document(arguments!!.getString("symptom"))
+            docRef.get()
+                    .addOnSuccessListener { document ->
+                        if (document != null || document!!.data != null) {
+                            Log.d(ContentValues.TAG, "DocumentSnapshot data: " + document.data)
+                            if (document.data == null) {
 
+                            } else {
+                                item = document.toObject(symptom_item::class.java) as symptom_item
+                                var str = ""
+                                for (a in document.data!!)
+                                    str = a.key + " : " + a.value + "\n"
+                                v.findViewById<TextView>(R.id.procedure).text = str
+
+                                Log.d(ContentValues.TAG, "Value is: " + document.data)
+
+                            }
+
+                        } else {
                         }
-                        else{
-                            item=document.toObject(symptom_item::class.java) as symptom_item
-                            var str=""
-                            for (a in document.data!!)
-                                str=a.key+" : "+a.value+"\n"
-                            v.findViewById<TextView>(R.id.procedure).text = str
-
-                            Log.d(ContentValues.TAG, "Value is: " +document.data)
-
-                        }
-
-                    } else {
                     }
-                }
-                .addOnFailureListener { exception ->
-                    Log.d(ContentValues.TAG, "get failed with ", exception)
-                }
+                    .addOnFailureListener { exception ->
+                        Log.d(ContentValues.TAG, "get failed with ", exception)
+                    }
 
+        }
+        else{
+            val docRef = db.collection("help").document("help_item")
+            docRef.get()
+                    .addOnSuccessListener { document ->
+                        if (document != null || document!!.data != null) {
+                            Log.d(ContentValues.TAG, "DocumentSnapshot data: " + document.data)
+                            if (document.data == null) {
+
+                            } else {
+                                item = document.toObject(symptom_item::class.java) as symptom_item
+                                var str = ""
+                                for (a in document.data!!)
+                                    str = a.key + " : " + a.value + "\n"
+                                v.findViewById<TextView>(R.id.procedure).text = str
+
+                                Log.d(ContentValues.TAG, "Value is: " + document.data)
+
+                            }
+
+                        } else {
+                        }
+                    }
+                    .addOnFailureListener { exception ->
+                        Log.d(ContentValues.TAG, "get failed with ", exception)
+                    }
+
+        }
         return v
     }
 

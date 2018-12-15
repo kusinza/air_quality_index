@@ -84,7 +84,8 @@ class menu_home : Fragment() {
 
                             }
                             R.id.help->{
-
+                                val st=help()
+                                updateUI(st,"help",v)
                             }
                         }
                     }

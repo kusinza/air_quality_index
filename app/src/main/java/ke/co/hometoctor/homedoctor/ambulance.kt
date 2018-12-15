@@ -66,7 +66,6 @@ class ambulance : Fragment(), OnMapReadyCallback {
     lateinit var mapView: MapView
     lateinit var locationManager: LocationManager
     lateinit var locationListener: LocationListener
-    lateinit var username_search: SearchView
     lateinit var v: View
 
     lateinit var sphericalUtil: SphericalUtil
@@ -74,10 +73,6 @@ class ambulance : Fragment(), OnMapReadyCallback {
     internal var items: ArrayList<UserFoundItem> = ArrayList<UserFoundItem>()
 
     var item=ke.co.hometoctor.homedoctor.item()
-    lateinit var selected_user_view: LinearLayout
-    lateinit var name_user: TextView
-    lateinit var username: TextView
-    lateinit var acc_type: TextView
     lateinit var user: Bundle
     lateinit var db: FirebaseFirestore
 
@@ -85,7 +80,7 @@ class ambulance : Fragment(), OnMapReadyCallback {
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val v= inflater.inflate(R.layout.fragment_ambulance, container, false)
-        username_search = v.findViewById<View>(R.id.search_text) as SearchView
+       // username_search = v.findViewById<View>(R.id.search_text) as SearchView
       //  user = arguments
 //        sphericalUtil=SphericalUtil()
         db= FirebaseFirestore.getInstance()
@@ -116,14 +111,6 @@ class ambulance : Fragment(), OnMapReadyCallback {
                     Log.d(ContentValues.TAG, "get failed with ", exception)
                 }
 
-
-        selected_user_view = v.findViewById<View>(R.id.selected_user_view) as LinearLayout
-        selected_user_view.setVisibility(View.GONE)
-        // selected_user_view.animate().translationY(-selected_user_view.getHeight()).setDuration(300);
-        name_user = v.findViewById<View>(R.id.name_user) as TextView
-        username = v.findViewById<View>(R.id.username) as TextView
-        acc_type = v.findViewById<View>(R.id.acc_type) as TextView
-        username_search.setIconifiedByDefault(false)
 
         this.v=v
 
@@ -179,28 +166,6 @@ class ambulance : Fragment(), OnMapReadyCallback {
 
         locationManager = activity!!.getSystemService(Context.LOCATION_SERVICE) as LocationManager
 
-        username_search.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-
-            override fun onQueryTextSubmit(s: String): Boolean {
-                selected_user_view.visibility = View.GONE
-
-                //search(username_search.query.toString(), user)
-                return false
-            }
-
-            override fun onQueryTextChange(s: String): Boolean {
-
-                selected_user_view.visibility = View.GONE
-                /* selected_user_view.animate().translationY(-selected_user_view.getHeight()).setDuration(1).setListener(new AnimatorListenerAdapter() {
-                    @Override
-                    public void onAnimationEnd(Animator animation) {
-                        selected_user_view.setVisibility(View.GONE);
-                        super.onAnimationEnd(animation);
-                    }
-                });*/
-                return false
-            }
-        })
 
         val zoom = CameraUpdateFactory.zoomTo(15f)
 
