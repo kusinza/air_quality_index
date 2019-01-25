@@ -8,6 +8,10 @@ The clinic button works to help the user get the information about the clinics a
 
 The help button seeks to educate the user on how to use the application
 
+You can sign up or just use this details: 
+email: muguma12@yahoo.com
+password: muguma
+
 <img src="Screenshot_20181215-163303.png" width="150"> <img src="Screenshot_20181215-163315.png" width="150">
 
 <img src="Screenshot_20181215-163332.png" width="150"> <img src="Screenshot_20181215-163343.png" width="150">
