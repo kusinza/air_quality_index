@@ -7,3 +7,11 @@ The emergency Button when clicked immediately sends notification to the nearest 
 The clinic button works to help the user get the information about the clinics around her. One can also order ambulance from it, see clinic rates, rating, level and even medics qualifications  .
 
 The help button seeks to educate the user on how to use the application
+
+<img src="Screenshot_20181215-163303.png" width="150"> <img src="Screenshot_20181215-163315.png" width="150">
+
+<img src="Screenshot_20181215-163332.png" width="150"> <img src="Screenshot_20181215-163343.png" width="150">
+
+<img src="Screenshot_20181215-163358.png" width="150"> <img src="Screenshot_20181215-163417.png" width="150">
+
+<img src="Screenshot_20181215-164252.png" width="150">
